@@ -165,15 +165,15 @@ backend = shell
 # a user login after a random number of attempts.
 # It will also cache username/password combinations that allow login.
 #
-auth_class = UserDB
+#auth_class = UserDB
 
 # When AuthRandom is used also set the
 #  auth_class_parameters: <min try>, <max try>, <maxcache>
 #  for example: 2, 5, 10 = allows access after randint(2,5) attempts
 #  and cache 10 combinations.
 #
-#auth_class = AuthRandom
-#auth_class_parameters = 2, 5, 10
+auth_class = AuthRandom
+auth_class_parameters = 2, 5, 10
 
 
 # No authentication checking at all
@@ -190,7 +190,7 @@ auth_class = UserDB
 # ============================================================================
 
 # Source Port to report in logs (useful if you use iptables to forward ports to Cowrie)
-#reported_ssh_port = 22
+reported_ssh_port = 22
 
 
 
@@ -345,7 +345,7 @@ dsa_private_key = ${honeypot:state_path}/ssh_host_dsa_key
 # SSH-2.0-OpenSSH_5.9
 #
 # (default: "SSH-2.0-SSH-2.0-OpenSSH_6.0p1 Debian-4+deb7u2")
-version = SSH-2.0-OpenSSH_6.0p1 Debian-4+deb7u2
+version = OpenSSH_7.4p1 Debian-10+deb9u3
 
 
 # IP addresses to listen for incoming SSH connections.
@@ -459,7 +459,7 @@ listen_endpoints = tcp:2223:interface=0.0.0.0
 
 
 # Source Port to report in logs (useful if you use iptables to forward ports to Cowrie)
-#reported_port = 23
+reported_port = 23
 
 
 
