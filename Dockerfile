@@ -48,7 +48,7 @@ RUN find /cowrie -type d -exec chmod 755 {} \; && \
   find /cowrie -type f -exec chmod 744 {} \;
 
 FROM pre-release as release
-LABEL maintainer="Florian Pelgrim <florian.pelgrim@craneworks.de>"
+LABEL maintainer="m00cifer"
 ENV PYTHONPATH=/cowrie
 WORKDIR /cowrie
 EXPOSE 2222/tcp
